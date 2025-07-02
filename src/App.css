@@ -1,3 +1,4 @@
+
 /* Reset and base styles */
 * {
   box-sizing: border-box;
@@ -18,6 +19,7 @@ body {
   padding: 1rem;
   position: relative;
 }
+
 body::before {
   content: '';
   position: fixed;
@@ -29,6 +31,7 @@ body::before {
   backdrop-filter: blur(2px);
   z-index: -1;
 }
+
 /* Main form wrapper */
 .form-wrapper {
   max-width: 900px;
@@ -43,6 +46,7 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
 }
+
 .form-wrapper::before {
   content: '';
   position: absolute;
@@ -53,6 +57,7 @@ body::before {
   background: linear-gradient(90deg, #3b82f6, #1d4ed8);
   border-radius: 24px 24px 0 0;
 }
+
 /* Form title and description */
 h1 {
   color: #1a202c;
@@ -65,6 +70,7 @@ h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 .form-description {
   text-align: center;
   color: #64748b;
@@ -72,6 +78,7 @@ h1 {
   margin-bottom: 2.5rem;
   font-weight: 500;
 }
+
 /* Form sections */
 .form-section {
   border: 1px solid rgba(226, 232, 240, 0.8);
@@ -89,6 +96,7 @@ h1 {
   box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
   background: rgba(255, 255, 255, 0.95);
 }
+
 .form-section legend {
   font-size: 1.375rem;
   font-weight: 700;
@@ -98,6 +106,7 @@ h1 {
   border-radius: 8px;
   border: 2px solid #3b82f6;
 }
+
 /* Form groups */
 .form-group {
   margin-bottom: 1.5rem;
@@ -110,6 +119,7 @@ h1 {
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
 }
+
 /* Input styles */
 input[type="text"],
 input[type="email"],
@@ -128,6 +138,7 @@ select {
   color: #1a202c;
   font-weight: 500;
 }
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
@@ -151,6 +162,7 @@ select:hover {
   border-color: #60a5fa;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
 }
+
 input[aria-invalid="true"],
 select[aria-invalid="true"] {
   border-color: #ef4444;
@@ -161,6 +173,7 @@ input::placeholder {
   color: #9ca3af;
   font-weight: 400;
 }
+
 /* Select dropdown */
 select {
   cursor: pointer;
@@ -175,6 +188,7 @@ select option {
   background: white;
   color: #1a202c;
 }
+
 /* Radio button styles */
 .radio-group {
   border: none;
@@ -191,6 +205,7 @@ select option {
   background: transparent;
   border: none;
 }
+
 .radio-options {
   display: flex;
   gap: 2rem;
@@ -219,6 +234,7 @@ select option {
   background: #eff6ff;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
 }
+
 input[type="radio"] {
   width: 1.25rem;
   height: 1.25rem;
@@ -238,6 +254,7 @@ input[type="radio"]:focus {
   font-weight: 500;
   color: #374151;
 }
+
 /* Checkbox styles */
 .checkbox-group {
   display: flex;
@@ -254,6 +271,7 @@ input[type="radio"]:focus {
   border-color: #3b82f6;
   background: #eff6ff;
 }
+
 input[type="checkbox"] {
   width: 1.25rem;
   height: 1.25rem;
@@ -275,6 +293,7 @@ input[type="checkbox"]:focus {
   line-height: 1.5;
   color: #374151;
 }
+
 .checkbox-group a {
   color: #3b82f6;
   text-decoration: none;
@@ -286,6 +305,7 @@ input[type="checkbox"]:focus {
 .checkbox-group a:hover {
   border-bottom-color: #3b82f6;
 }
+
 /* Error messages */
 .error {
   color: #ef4444;
@@ -305,6 +325,7 @@ input[type="checkbox"]:focus {
   content: '⚠';
   font-size: 1rem;
 }
+
 /* Form actions */
 .form-actions {
   display: flex;
@@ -314,6 +335,7 @@ input[type="checkbox"]:focus {
   padding-top: 2rem;
   border-top: 2px solid #e2e8f0;
 }
+
 /* Button styles */
 .btn-primary,
 .btn-secondary {
@@ -362,6 +384,7 @@ input[type="checkbox"]:focus {
   outline: 3px solid rgba(59, 130, 246, 0.3);
   outline-offset: 2px;
 }
+
 /* Success message */
 .success-message {
   text-align: center;
@@ -392,6 +415,7 @@ input[type="checkbox"]:focus {
 .success-message button {
   margin-top: 2rem;
 }
+
 /* Modern animations and effects */
 @keyframes fadeInUp {
   from {
@@ -421,6 +445,7 @@ input[type="checkbox"]:focus {
 .form-section:nth-child(3) { animation-delay: 0.2s; }
 .form-section:nth-child(4) { animation-delay: 0.3s; }
 .form-section:nth-child(5) { animation-delay: 0.4s; }
+
 /* Floating label effect */
 .floating-label {
   position: relative;
@@ -441,35 +466,36 @@ input[type="checkbox"]:focus {
   background: white;
   padding: 0 4px;
 }
+
 /* Responsive design */
 @media (max-width: 768px) {
   body {
     padding: 0.5rem;
   }
-
+  
   .form-wrapper {
     margin: 1rem auto;
     padding: 2rem;
   }
-
+  
   h1 {
     font-size: 2rem;
   }
-
+  
   .form-section {
     padding: 1.5rem;
   }
-
+  
   .radio-options {
     flex-direction: column;
     gap: 1rem;
   }
-
+  
   .form-actions {
     flex-direction: column;
     align-items: stretch;
   }
-
+  
   .btn-primary,
   .btn-secondary {
     width: 100%;
@@ -480,21 +506,22 @@ input[type="checkbox"]:focus {
   .form-wrapper {
     padding: 1.5rem;
   }
-
+  
   h1 {
     font-size: 1.75rem;
   }
-
+  
   .form-description {
     font-size: 1rem;
   }
 }
+
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .form-wrapper {
     border: 3px solid #3b82f6;
   }
-
+  
   input[type="text"],
   input[type="email"],
   input[type="tel"],
@@ -505,6 +532,7 @@ input[type="checkbox"]:focus {
     border: 3px solid #1e40af;
   }
 }
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -513,3 +541,5 @@ input[type="checkbox"]:focus {
     transition-duration: 0.01ms !important;
   }
 }
+
+

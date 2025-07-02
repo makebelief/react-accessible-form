@@ -1,24 +1,30 @@
+
 import React, { useState } from 'react';
 import './App.css';
 
 function App() {
   const [formData, setFormData] = useState({
+    // Personal Info
     fullName: '',
     email: '',
     phoneNumber: '',
     gender: '',
     dateOfBirth: '',
+    // Academic Info
     course: '',
     yearOfStudy: '',
     enrollmentType: '',
+    // Account Info
     username: '',
     password: '',
     confirmPassword: '',
+    // Consent
     agreeToTerms: false
   });
 
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+
   const courses = [
     'Computer Science',
     'Business Administration',
@@ -39,6 +45,7 @@ function App() {
     setFormData(prev => ({ ...prev, [name]: fieldValue }));
     setErrors(prev => ({ ...prev, [name]: '' }));
   };
+
   const validate = () => {
     const newErrors = {};
     
@@ -90,6 +97,7 @@ function App() {
     
     return newErrors;
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = validate();
@@ -122,6 +130,7 @@ function App() {
     setErrors({});
     setSubmitted(false);
   };
+
   if (submitted) {
     return (
       <main className="form-wrapper">
@@ -140,11 +149,13 @@ function App() {
       </main>
     );
   }
+
   return (
     <main className="form-wrapper">
       <form onSubmit={handleSubmit} aria-labelledby="formTitle" noValidate>
         <h1 id="formTitle">Student Registration Form</h1>
         <p className="form-description">Join our Learning Management System</p>
+
         {/* Personal Information Section */}
         <fieldset className="form-section">
           <legend>Personal Information</legend>
@@ -227,6 +238,7 @@ function App() {
             {errors.dateOfBirth && <p className="error" role="alert">{errors.dateOfBirth}</p>}
           </div>
         </fieldset>
+
         {/* Academic Information Section */}
         <fieldset className="form-section">
           <legend>Academic Information</legend>
@@ -297,6 +309,7 @@ function App() {
             {errors.enrollmentType && <p className="error" role="alert">{errors.enrollmentType}</p>}
           </fieldset>
         </fieldset>
+
         {/* Account Information Section */}
         <fieldset className="form-section">
           <legend>Account Information</legend>
@@ -346,6 +359,7 @@ function App() {
             {errors.confirmPassword && <p className="error" role="alert">{errors.confirmPassword}</p>}
           </div>
         </fieldset>
+
         {/* Terms and Conditions */}
         <fieldset className="form-section">
           <legend>Terms and Conditions</legend>
@@ -366,6 +380,7 @@ function App() {
           </div>
           {errors.agreeToTerms && <p className="error" role="alert">{errors.agreeToTerms}</p>}
         </fieldset>
+
         {/* Form Actions */}
         <div className="form-actions">
           <button type="submit" className="btn-primary">
@@ -378,4 +393,9 @@ function App() {
       </form>
     </main>
   );
-  export default App;
+}
+
+export default App;
+
+
+
