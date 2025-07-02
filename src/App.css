@@ -362,3 +362,33 @@ input[type="checkbox"]:focus {
   outline: 3px solid rgba(59, 130, 246, 0.3);
   outline-offset: 2px;
 }
+/* Success message */
+.success-message {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.success-message h1 {
+  color: #059669;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #059669, #047857);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.success-message p {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.success-message strong {
+  color: #1a202c;
+  font-weight: 700;
+}
+
+.success-message button {
+  margin-top: 2rem;
+}
