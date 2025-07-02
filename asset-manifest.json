@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-accessible-form/static/css/main.9ed5e503.css",
+    "main.js": "/react-accessible-form/static/js/main.ce95fd1e.js",
+    "index.html": "/react-accessible-form/index.html",
+    "main.9ed5e503.css.map": "/react-accessible-form/static/css/main.9ed5e503.css.map",
+    "main.ce95fd1e.js.map": "/react-accessible-form/static/js/main.ce95fd1e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ed5e503.css",
+    "static/js/main.ce95fd1e.js"
+  ]
+}
