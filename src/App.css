@@ -53,3 +53,15 @@ body::before {
   background: linear-gradient(90deg, #3b82f6, #1d4ed8);
   border-radius: 24px 24px 0 0;
 }
+/* Form title and description */
+h1 {
+  color: #1a202c;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
