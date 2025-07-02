@@ -145,3 +145,85 @@ function App() {
       <form onSubmit={handleSubmit} aria-labelledby="formTitle" noValidate>
         <h1 id="formTitle">Student Registration Form</h1>
         <p className="form-description">Join our Learning Management System</p>
+        {/* Personal Information Section */}
+        <fieldset className="form-section">
+          <legend>Personal Information</legend>
+          
+          <div className="form-group">
+            <label htmlFor="fullName">Full Name *</label>
+            <input 
+              id="fullName" 
+              name="fullName" 
+              type="text" 
+              value={formData.fullName} 
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.fullName ? "true" : "false"}
+              placeholder="Enter your full name"
+            />
+            {errors.fullName && <p className="error" role="alert">{errors.fullName}</p>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email">Email Address *</label>
+            <input 
+              id="email" 
+              name="email" 
+              type="email" 
+              value={formData.email} 
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.email ? "true" : "false"}
+              placeholder="Enter your email address"
+            />
+            {errors.email && <p className="error" role="alert">{errors.email}</p>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="phoneNumber">Phone Number *</label>
+            <input 
+              id="phoneNumber" 
+              name="phoneNumber" 
+              type="tel" 
+              value={formData.phoneNumber} 
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.phoneNumber ? "true" : "false"}
+              placeholder="Enter your phone number"
+            />
+            {errors.phoneNumber && <p className="error" role="alert">{errors.phoneNumber}</p>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="gender">Gender *</label>
+            <select 
+              id="gender" 
+              name="gender" 
+              value={formData.gender} 
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.gender ? "true" : "false"}
+            >
+              <option value="">Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+              <option value="prefer-not-to-say">Prefer not to say</option>
+            </select>
+            {errors.gender && <p className="error" role="alert">{errors.gender}</p>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="dateOfBirth">Date of Birth *</label>
+            <input 
+              id="dateOfBirth" 
+              name="dateOfBirth" 
+              type="date" 
+              value={formData.dateOfBirth} 
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.dateOfBirth ? "true" : "false"}
+            />
+            {errors.dateOfBirth && <p className="error" role="alert">{errors.dateOfBirth}</p>}
+          </div>
+        </fieldset>
