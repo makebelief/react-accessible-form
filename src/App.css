@@ -65,3 +65,10 @@ h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+.form-description {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
