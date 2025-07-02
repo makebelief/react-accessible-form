@@ -1,43 +1,20 @@
-.form-wrapper {
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 2rem;
-  font-family: sans-serif;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-form label {
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
-
-button {
-  background: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-input:focus, textarea:focus {
-  outline: 2px solid #0056b3;
-}
-
-.error {
-  color: red;
-  font-size: 0.875rem;
-}
-
-.success {
-  color: green;
-  font-weight: bold;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+  color: #1a202c;
+  background-image: url('https://cdn.prod.website-files.com/6499964d792474a1c5eba54c/66d6f6b36d605e0d0bc204ab_451987415_916115050529736_1795213479339789038_n.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 1rem;
+  position: relative;
 }
