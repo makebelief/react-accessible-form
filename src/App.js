@@ -122,3 +122,21 @@ function App() {
     setErrors({});
     setSubmitted(false);
   };
+  if (submitted) {
+    return (
+      <main className="form-wrapper">
+        <div className="success-message">
+          <h1>Registration Successful! 🎉</h1>
+          <p>Welcome to our LMS platform, <strong>{formData.fullName}</strong>!</p>
+          <p>Your account has been created successfully. You will receive a confirmation email shortly.</p>
+          <button 
+            type="button" 
+            onClick={() => setSubmitted(false)}
+            className="btn-secondary"
+          >
+            Register Another Student
+          </button>
+        </div>
+      </main>
+    );
+  }
