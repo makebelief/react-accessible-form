@@ -43,3 +43,13 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
 }
+.form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+  border-radius: 24px 24px 0 0;
+}
