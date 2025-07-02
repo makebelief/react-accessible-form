@@ -305,3 +305,12 @@ input[type="checkbox"]:focus {
   content: '⚠';
   font-size: 1rem;
 }
+/* Form actions */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e2e8f0;
+}
