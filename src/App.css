@@ -98,3 +98,15 @@ h1 {
   border-radius: 8px;
   border: 2px solid #3b82f6;
 }
+/* Form groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
