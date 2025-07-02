@@ -366,3 +366,15 @@ function App() {
           </div>
           {errors.agreeToTerms && <p className="error" role="alert">{errors.agreeToTerms}</p>}
         </fieldset>
+        {/* Form Actions */}
+        <div className="form-actions">
+          <button type="submit" className="btn-primary">
+            Register Now
+          </button>
+          <button type="button" onClick={handleReset} className="btn-secondary">
+            Reset Form
+          </button>
+        </div>
+      </form>
+    </main>
+  );
