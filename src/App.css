@@ -421,3 +421,23 @@ input[type="checkbox"]:focus {
 .form-section:nth-child(3) { animation-delay: 0.2s; }
 .form-section:nth-child(4) { animation-delay: 0.3s; }
 .form-section:nth-child(5) { animation-delay: 0.4s; }
+/* Floating label effect */
+.floating-label {
+  position: relative;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+  transform: translateY(-25px) scale(0.85);
+  color: #3b82f6;
+}
+
+.floating-label label {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: white;
+  padding: 0 4px;
+}
