@@ -227,3 +227,73 @@ function App() {
             {errors.dateOfBirth && <p className="error" role="alert">{errors.dateOfBirth}</p>}
           </div>
         </fieldset>
+        {/* Academic Information Section */}
+        <fieldset className="form-section">
+          <legend>Academic Information</legend>
+          
+          <div className="form-group">
+            <label htmlFor="course">Course *</label>
+            <select 
+              id="course" 
+              name="course" 
+              value={formData.course} 
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.course ? "true" : "false"}
+            >
+              <option value="">Select your course</option>
+              {courses.map(course => (
+                <option key={course} value={course}>{course}</option>
+              ))}
+            </select>
+            {errors.course && <p className="error" role="alert">{errors.course}</p>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="yearOfStudy">Year of Study *</label>
+            <input 
+              id="yearOfStudy" 
+              name="yearOfStudy" 
+              type="number" 
+              min="1" 
+              max="8" 
+              value={formData.yearOfStudy} 
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.yearOfStudy ? "true" : "false"}
+              placeholder="Enter year (1-8)"
+            />
+            {errors.yearOfStudy && <p className="error" role="alert">{errors.yearOfStudy}</p>}
+          </div>
+
+          <fieldset className="radio-group">
+            <legend>Enrollment Type *</legend>
+            <div className="radio-options">
+              <div className="radio-option">
+                <input 
+                  id="fullTime" 
+                  name="enrollmentType" 
+                  type="radio" 
+                  value="full-time" 
+                  checked={formData.enrollmentType === 'full-time'}
+                  onChange={handleChange}
+                  aria-required="true"
+                />
+                <label htmlFor="fullTime">Full-time</label>
+              </div>
+              <div className="radio-option">
+                <input 
+                  id="partTime" 
+                  name="enrollmentType" 
+                  type="radio" 
+                  value="part-time" 
+                  checked={formData.enrollmentType === 'part-time'}
+                  onChange={handleChange}
+                  aria-required="true"
+                />
+                <label htmlFor="partTime">Part-time</label>
+              </div>
+            </div>
+            {errors.enrollmentType && <p className="error" role="alert">{errors.enrollmentType}</p>}
+          </fieldset>
+        </fieldset>
