@@ -90,3 +90,35 @@ function App() {
     
     return newErrors;
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = validate();
+    
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      setSubmitted(false);
+    } else {
+      setErrors({});
+      setSubmitted(true);
+      console.log('Form submitted successfully:', formData);
+    }
+  };
+
+  const handleReset = () => {
+    setFormData({
+      fullName: '',
+      email: '',
+      phoneNumber: '',
+      gender: '',
+      dateOfBirth: '',
+      course: '',
+      yearOfStudy: '',
+      enrollmentType: '',
+      username: '',
+      password: '',
+      confirmPassword: '',
+      agreeToTerms: false
+    });
+    setErrors({});
+    setSubmitted(false);
+  };
