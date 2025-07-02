@@ -489,3 +489,19 @@ input[type="checkbox"]:focus {
     font-size: 1rem;
   }
 }
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .form-wrapper {
+    border: 3px solid #3b82f6;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="number"],
+  input[type="password"],
+  select {
+    border: 3px solid #1e40af;
+  }
+}
