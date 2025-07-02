@@ -297,3 +297,52 @@ function App() {
             {errors.enrollmentType && <p className="error" role="alert">{errors.enrollmentType}</p>}
           </fieldset>
         </fieldset>
+        {/* Account Information Section */}
+        <fieldset className="form-section">
+          <legend>Account Information</legend>
+          
+          <div className="form-group">
+            <label htmlFor="username">Username *</label>
+            <input 
+              id="username" 
+              name="username" 
+              type="text" 
+              value={formData.username} 
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.username ? "true" : "false"}
+              placeholder="Choose a username"
+            />
+            {errors.username && <p className="error" role="alert">{errors.username}</p>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Password *</label>
+            <input 
+              id="password" 
+              name="password" 
+              type="password" 
+              value={formData.password} 
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.password ? "true" : "false"}
+              placeholder="Create a password"
+            />
+            {errors.password && <p className="error" role="alert">{errors.password}</p>}
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="confirmPassword">Confirm Password *</label>
+            <input 
+              id="confirmPassword" 
+              name="confirmPassword" 
+              type="password" 
+              value={formData.confirmPassword} 
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.confirmPassword ? "true" : "false"}
+              placeholder="Confirm your password"
+            />
+            {errors.confirmPassword && <p className="error" role="alert">{errors.confirmPassword}</p>}
+          </div>
+        </fieldset>
