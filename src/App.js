@@ -346,3 +346,23 @@ function App() {
             {errors.confirmPassword && <p className="error" role="alert">{errors.confirmPassword}</p>}
           </div>
         </fieldset>
+        {/* Terms and Conditions */}
+        <fieldset className="form-section">
+          <legend>Terms and Conditions</legend>
+          
+          <div className="checkbox-group">
+            <input 
+              id="agreeToTerms" 
+              name="agreeToTerms" 
+              type="checkbox" 
+              checked={formData.agreeToTerms}
+              onChange={handleChange}
+              aria-required="true" 
+              aria-invalid={errors.agreeToTerms ? "true" : "false"}
+            />
+            <label htmlFor="agreeToTerms">
+              I agree to the <a href="#" target="_blank" rel="noopener noreferrer">Terms and Conditions</a> and <a href="#" target="_blank" rel="noopener noreferrer">Privacy Policy</a> *
+            </label>
+          </div>
+          {errors.agreeToTerms && <p className="error" role="alert">{errors.agreeToTerms}</p>}
+        </fieldset>
