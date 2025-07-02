@@ -140,3 +140,8 @@ function App() {
       </main>
     );
   }
+  return (
+    <main className="form-wrapper">
+      <form onSubmit={handleSubmit} aria-labelledby="formTitle" noValidate>
+        <h1 id="formTitle">Student Registration Form</h1>
+        <p className="form-description">Join our Learning Management System</p>
