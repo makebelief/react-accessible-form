@@ -378,3 +378,4 @@ function App() {
       </form>
     </main>
   );
+  export default App;
